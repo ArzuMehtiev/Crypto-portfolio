@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Крипто Портфель</title>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="diagramma">
+			<div class="diagramma__title">
+				Диаграмма распределения
+			</div>
+			<div class="diagramma__btn" id="chart-btn">Обновить</div>
+			<div class="diagramma__content">
+				<!-- Отображение графика из chart.js -->
+				<canvas id="diagramma-chart"></canvas>
+				<!-- Итоговое значение -->
+				<div class="result">
+					<div class="result__value" id="result"></div>
+					<div class="result__text">$</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="portfolio">
+			<div class="portfolio__add" id="port-add">Добавить новое</div>
+			<div class="portfolio__title">Ваши активы:</div>
+      <div class="assets" id="assets">
+      	<ul class="assets__list">
+      		<li>Название</li>
+      		<li>Цена</li>
+      		<li>Кол-во</li>
+      		<li>Итог</li>
+      	</ul>
+      </div>
+		</div>
+	</div>
+
+	<div class="modal" id='modal'>
+		<div class="modal__wrap" id="modal-wrap">
+			<div class="modal__window">
+				<div class="modal__title">Выберите монету:</div>
+					<select class="modal__select" name="select" id="select">
+						<option value="BTC" data-name="Bitcoin">Bitcoin</option>
+						<option value="ETH" data-name="Ethereum">Ethereum</option>
+						<option value="SOL" data-name="Solana">Solana</option>
+					</select>
+					<div class="modal__input">
+						<input id="input" type="number" class="input" placeholder="Количество">
+						<input id="output" type="number" class="input" placeholder="Стоимость">
+					</div>
+					<div class="modal__add" id="modal-add">Добавить в потрфель</div>
+			</div>
+		</div>
+	</div>		
+				
+			
+		
+		
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
